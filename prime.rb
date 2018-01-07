@@ -2,7 +2,7 @@
 def sieve(max)
   primes = (o..max).to_a #object into array
 
-# set first and second positions to nil since they aren't prime 
+# set first and second positions to nil since they aren't prime
 primes[0] = primes[1] = nil
 
 #iterate through primes array
@@ -12,7 +12,7 @@ primes.each do |p|
   next unless p
 
   #break if we are past the square root of the max values
-  break if p*p > max 
+  break if p*p > max
   counter = counter + 1 #counter+=1
   #start at the square of the current number, and step through
   #go up to the max value, by multiples of the current number
