@@ -2,18 +2,27 @@
 require 'pry'
 
 def prime?(n)
-  if (n <= 1)
+  if n < 2
     false
-  elsif (n <= 3)
-    true
-  elsif (num % 2 == 0 || num % 3 == 0)
+  elsif n.even?
     false
   else
-    test_range = (2..num - 1).to_a
-    if (test_range.any? {|test| num % test == 0})
-      false
-    else
-      true
+    primes = Array.new
+    primes << 2
+    primes << 3
+    i = 5
+    others = false
+
+    while i < 20000
+      others = prime.any? do |prime|
+        i % prime == 0
+      end
+      if !others
+        primes << i
+      end
+
+      i = i + 2
     end
+    return primes.include?(n)
   end
 end
