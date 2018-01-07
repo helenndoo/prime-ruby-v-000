@@ -17,7 +17,7 @@ primes.each do |p|
   #start at the square of the current number, and step through
   #go up to the max value, by multiples of the current number
   #replace that value with nil in the primes array
-  (p*p).step(max,p) {|m| primes|m| = nil}
+  (p*p).step(max,p) { |m| primes|m| = nil}
 end
 
 #return the compacted array
