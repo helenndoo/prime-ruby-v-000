@@ -12,4 +12,4 @@ def prime?(n)
 else
   return true
 end
-ende
+end
