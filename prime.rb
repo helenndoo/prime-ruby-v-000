@@ -3,7 +3,7 @@ def prime?(n)
   if n <= 1
     return false
   end
-  array = (2..integer).to_s
+  array = (2..integer).to_a
   array.pop
   if array.any? do |number|
     integer % number == 0
